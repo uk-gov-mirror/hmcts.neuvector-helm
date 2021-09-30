@@ -24,7 +24,7 @@ spec:
         app: neuvector-enforcer-pod
         release: {{ .Release.Name }}
     spec:
-      { { - if .Values.controller.affinity } }
+      { { - if .Values.enforcer.affinity } }
       affinity:
       { { toYaml .Values.enforcer.affinity | indent 8 } }
       { { - end } }
